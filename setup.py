@@ -37,7 +37,7 @@ setup(
     # package_dir={'': 'sp_ff_apa_corumbatai'},
     # Quando são diversos módulos...
     packages=find_packages('.', exclude=['tests']),
-    packages=find_packages(),
+    #packages=find_packages(),
     # Dados
     # include_package_data=True,
     # package_data={'': ['data/output/geo/*.7z']},
