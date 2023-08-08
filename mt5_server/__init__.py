@@ -361,9 +361,11 @@ class MetaTrader5(object):
 
     def __init__(
         self,
-        host='localhost',
-        #host='192.168.31.251',
-        port=18812,
+        host,
+        port,
+        # host='localhost', # Originalmente era isso!
+        # port=18812, # Precisa ser iso... por´m, como vari´vel, é melhor!
+        # host='192.168.31.251', # Precisa ser iso... por´m, como vari´vel, é melhor!
     ):
         '''
         host: str
