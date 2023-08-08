@@ -361,8 +361,8 @@ class MetaTrader5(object):
 
     def __init__(
         self,
-        # host='localhost',
-        host='192.168.31.251',
+        host='localhost',
+        #host='192.168.31.251',
         port=18812,
     ):
         '''
