@@ -15,7 +15,7 @@ for line in open('requirements.txt', encoding='utf-8'):
         requirements.append(line.rstrip())
 
 
-VERSION = (0, 0, 1)
+VERSION = (0, 0, 2)
 __version__ = '.'.join(map(str, VERSION))
 
 
@@ -28,7 +28,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     url='https://github.com/michelmetran/mt5_server',
-    keywords='python, dados espaciais, geoprocessamento',
+    keywords='python, metatrader',
     # Python and Packages
     python_requires='>=3',
     install_requires=requirements,
@@ -36,8 +36,8 @@ setup(
     # Our packages live under src but src is not a package itself
     # package_dir={'': 'sp_ff_apa_corumbatai'},
     # Quando são diversos módulos...
-    packages=find_packages('mt5_server', exclude=['test']),
-    # packages=find_packages(),
+    packages=find_packages('.', exclude=['tests']),
+    packages=find_packages(),
     # Dados
     # include_package_data=True,
     # package_data={'': ['data/output/geo/*.7z']},
