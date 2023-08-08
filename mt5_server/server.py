@@ -154,10 +154,13 @@ class ClassicServer(cli.Application):
 
         if self.mode == 'threaded':
             self._serve_mode(ThreadedServer)
+            
         elif self.mode == 'forking':
             self._serve_mode(ForkingServer)
+            
         elif self.mode == 'oneshot':
             self._serve_oneshot()
+            
         elif self.mode == 'stdio':
             self._serve_stdio()
 
@@ -198,11 +201,14 @@ class ClassicServer(cli.Application):
         sys.stdout = open(os.devnull, "w")
         sys.stderr = open(os.devnull, "w")
         conn = rpyc.classic.connect_pipes(origstdin, origstdout)
+        
         try:
             try:
                 conn.serve_all()
+                
             except KeyboardInterrupt:
                 print("User interrupt!")
+                
         finally:
             conn.close()
 
