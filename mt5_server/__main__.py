@@ -69,6 +69,7 @@ def main():
     project_path = module_path.parent
     server_path = project_path / server_dir
     server_path.mkdir(exist_ok=True, parents=True)
+    
     print(server_path)
 
     # Copy Server
